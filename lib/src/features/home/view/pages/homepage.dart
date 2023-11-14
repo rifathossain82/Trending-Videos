@@ -55,19 +55,24 @@ class _HomepageState extends State<Homepage> {
         onRefresh: () async {
           homeBloc.add(ReloadTrendingVideos());
         },
-        child: BlocBuilder<HomeBloc, HomeState>(
-          builder: (context, state) {
-            return state.status == Status.failure
-                ? const FailureWidgetBuilder()
-                : state.status == Status.success
-                    ? state.trendingVideos.isEmpty
-                        ? const FailureWidgetBuilder()
-                        : VideoListWidget(
-                            scrollController: _scrollController,
-                            state: state,
-                          )
-                    : const HomepageLoadingWidget();
-          },
+        child: Stack(
+          children: [
+            ListView(),
+            BlocBuilder<HomeBloc, HomeState>(
+              builder: (context, state) {
+                return state.status == Status.failure
+                    ? const FailureWidgetBuilder()
+                    : state.status == Status.success
+                        ? state.trendingVideos.isEmpty
+                            ? const FailureWidgetBuilder()
+                            : VideoListWidget(
+                                scrollController: _scrollController,
+                                state: state,
+                              )
+                        : const HomepageLoadingWidget();
+              },
+            ),
+          ],
         ),
       ),
     );
