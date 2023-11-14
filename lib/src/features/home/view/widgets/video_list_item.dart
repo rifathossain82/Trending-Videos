@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:trending_videos/src/core/extensions/build_context_extension.dart';
 import 'package:trending_videos/src/core/extensions/date_time_extension.dart';
+import 'package:trending_videos/src/core/services/navigation_services.dart';
 import 'package:trending_videos/src/core/utils/color.dart';
 import 'package:trending_videos/src/core/widgets/cached_network_image_builder.dart';
 import 'package:trending_videos/src/features/home/model/trending_video_model.dart';
+import 'package:trending_videos/src/features/video_player/view/pages/video_player_page.dart';
 
 class VideoListItem extends StatelessWidget {
   final TrendingVideoModel video;
@@ -16,19 +18,26 @@ class VideoListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 290,
-      width: context.screenWidth,
-      decoration: BoxDecoration(
-        color: kWhite,
-      ),
-      child: Column(
-        children: [
-          Expanded(
-            child: _ThumbnailWidget(video: video),
-          ),
-          _ItemFooterWidget(video: video),
-        ],
+    return GestureDetector(
+      onTap: () {
+        NavigationService.push(
+          VideoPlayerPage(video: video),
+        );
+      },
+      child: Container(
+        height: 290,
+        width: context.screenWidth,
+        decoration: BoxDecoration(
+          color: kWhite,
+        ),
+        child: Column(
+          children: [
+            Expanded(
+              child: _ThumbnailWidget(video: video),
+            ),
+            _ItemFooterWidget(video: video),
+          ],
+        ),
       ),
     );
   }
@@ -151,5 +160,3 @@ class _ItemFooterWidget extends StatelessWidget {
     );
   }
 }
-
-
