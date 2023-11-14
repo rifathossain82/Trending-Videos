@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Color kPrimaryColor = const Color(0xFF3898FC);
-Color kScaffoldBackgroundColor = const Color(0xFFE2E8F0);
+Color kScaffoldBackgroundColor = const Color(0xFFF7FAFC);
 
 Color successColor = Colors.green;
 Color failedColor = Colors.red;
@@ -19,7 +19,7 @@ Color kBlue = const Color(0xFF3879E9);
 Color kBlueMedium = const Color(0xFF2F5BE0);
 Color kBlueLight = const Color(0xFFC7D0EC);
 Color kBlueDark = const Color(0xFF243E8B);
-Color kGrey = const Color(0xFF9EA1B6);
+Color kGrey = Colors.grey;
 Color kGreyMedium = const Color(0xFFCBD5E0);
 Color kGreyLight = const Color(0xFFe7e7e6);
 Color kGreen = const Color(0xFF1CAF5E);
@@ -31,7 +31,7 @@ Color kDefaultScaffoldBgColor = const Color(0xFFeeeeef);
 Color kShadowColor = const Color(0xFF616161).withOpacity(0.18);
 Color kItemShadowColor = const Color(0xFF000000).withOpacity(0.10);
 Color kItemBlueShadowColor = const Color(0xFFEFF3FF);
-Color kGreyTextColor = const Color(0xFFA5A5A5);
+Color kGreyTextColor = const Color(0xFF718096);
 Color kDividerColor = const Color(0xFFE8ECF2);
 Color kBlueGrey = const Color(0xFF7D8FAB);
 Color? kDarkBlueGrey = Colors.blueGrey[900];

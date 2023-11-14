@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trending_videos/src/core/widgets/bottom_loader.dart';
 import 'package:trending_videos/src/features/home/bloc/home_bloc.dart';
-import 'package:trending_videos/src/features/home/view/widgets/video_item_widget.dart';
+import 'package:trending_videos/src/features/home/view/widgets/video_list_item.dart';
 
 class VideoListWidget extends StatelessWidget {
   final ScrollController scrollController;
@@ -25,7 +25,7 @@ class VideoListWidget extends StatelessWidget {
       itemBuilder: (context, index) {
         return index >= state.trendingVideos.length
             ? const BottomLoader()
-            : VideoItemWidget(
+            : VideoListItem(
                 video: state.trendingVideos[index],
               );
       },
