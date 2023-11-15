@@ -25,9 +25,8 @@ Trending Videos App is a cutting-edge Flutter application that brings together t
 
 ## Screenshots:
 
-![Google Pixel 4 Presentation-min](https://github.com/rifathossain82/Trending-Videos/assets/88751768/83ac81d6-5d98-4200-9be3-ad06c23798d8)
 
-![Google Pixel 4 Presentation (1)-min](https://github.com/rifathossain82/Trending-Videos/assets/88751768/c797f0a0-ea29-4d9f-a895-8f57b882ebea)
+![Google Pixel 4 Presentation-min](https://github.com/rifathossain82/Trending-Videos/assets/88751768/c1ac33c1-78c1-49ed-ac0c-c9704410fbe8)
 
-![image](https://github.com/rifathossain82/Trending-Videos/assets/88751768/59a1a4bc-6cc5-40c1-a351-43448fc701ef)
+![Google Pixel 4 Presentation (1)-min](https://github.com/rifathossain82/Trending-Videos/assets/88751768/8f1a39b9-57ac-4057-9c50-d801260511c0)
 
