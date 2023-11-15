@@ -1,16 +1,33 @@
-# trending_videos
+# Trending Videos
 
-A new Flutter project.
+Trending Videos App is a cutting-edge Flutter application that brings together the latest trending videos from around the web and a seamless communication experience through Agora.io.
 
-## Getting Started
+## Descriptions:
 
-This project is a starting point for a Flutter application.
+- State management: **Flutter Bloc**
+- Project Architecture: **Feature First Layer**
+- Flutter version: [3.3.9](https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.3.9-stable.zip)
+- Dart version: 2.18.5  
 
-A few resources to get you started if this is your first Flutter project:
+<br><br>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### User id for chat:
+***Note: Token expires on November 16, 2023 4:27 PM UTC***
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- rh123
+- kawchar123
+- jobayer123
+- nayeem123
+- fahim123
+
+
+<br><br>
+
+## Screenshots:
+
+![Google Pixel 4 Presentation-min](https://github.com/rifathossain82/Trending-Videos/assets/88751768/83ac81d6-5d98-4200-9be3-ad06c23798d8)
+
+![Google Pixel 4 Presentation (1)-min](https://github.com/rifathossain82/Trending-Videos/assets/88751768/c797f0a0-ea29-4d9f-a895-8f57b882ebea)
+
+![image](https://github.com/rifathossain82/Trending-Videos/assets/88751768/59a1a4bc-6cc5-40c1-a351-43448fc701ef)
+
