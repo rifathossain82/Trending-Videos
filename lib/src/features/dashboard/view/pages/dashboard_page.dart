@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:trending_videos/src/features/chat/pages/chat_page.dart';
+import 'package:trending_videos/src/features/chat/view/pages/user_list_page.dart';
 import 'package:trending_videos/src/features/dashboard/cubits/dashboard_cubit.dart';
 import 'package:trending_videos/src/features/home/view/pages/homepage.dart';
 
@@ -12,18 +12,17 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-
   late DashboardCubit dashboardCubit;
 
   @override
   void initState() {
-    dashboardCubit = BlocProvider.of(context);
+    dashboardCubit = BlocProvider.of<DashboardCubit>(context);
     super.initState();
   }
 
   final pages = const [
     Homepage(),
-    ChatPage(),
+    UserListPage(),
   ];
 
   @override
