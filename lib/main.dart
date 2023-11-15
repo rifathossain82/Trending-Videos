@@ -8,6 +8,7 @@ import 'package:trending_videos/src/core/widgets/k_scroll_behavior.dart';
 import 'package:trending_videos/src/features/dashboard/cubits/dashboard_cubit.dart';
 import 'package:trending_videos/src/features/dashboard/view/pages/dashboard_page.dart';
 import 'package:trending_videos/src/features/home/bloc/home_bloc.dart';
+import 'package:trending_videos/src/features/video_player/bloc/video_player_cubit.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => DashboardCubit()),
         BlocProvider(create: (context) => HomeBloc()),
+        BlocProvider(create: (context) => VideoPlayerCubit()),
       ],
       child: MaterialApp(
         builder: (context, child) {
