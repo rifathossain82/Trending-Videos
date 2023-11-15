@@ -5,7 +5,7 @@ import 'package:trending_videos/src/core/services/navigation_services.dart';
 import 'package:trending_videos/src/core/utils/asset_path.dart';
 import 'package:trending_videos/src/core/utils/color.dart';
 import 'package:trending_videos/src/features/home/model/trending_video_model.dart';
-import 'package:trending_videos/src/features/video_player/bloc/video_player_cubit.dart';
+import 'package:trending_videos/src/features/video_player/cubit/video_player_cubit.dart';
 import 'package:trending_videos/src/features/video_player/view/widgets/video_player_page_buttons_widget.dart';
 import 'package:trending_videos/src/features/video_player/view/widgets/video_player_page_channel_info_widget.dart';
 import 'package:trending_videos/src/features/video_player/view/widgets/video_player_page_comments_widget.dart';

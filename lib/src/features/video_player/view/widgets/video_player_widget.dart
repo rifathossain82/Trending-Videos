@@ -4,8 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trending_videos/src/core/widgets/cached_network_image_builder.dart';
 import 'package:trending_videos/src/core/widgets/failure_widget_builder.dart';
 import 'package:trending_videos/src/features/home/model/trending_video_model.dart';
-import 'package:trending_videos/src/features/video_player/bloc/video_player_cubit.dart';
-import 'package:trending_videos/src/features/video_player/bloc/video_player_state.dart';
+import 'package:trending_videos/src/features/video_player/cubit/video_player_cubit.dart';
+import 'package:trending_videos/src/features/video_player/cubit/video_player_state.dart';
 
 class VideoPlayerWidget extends StatelessWidget {
   final TrendingVideoModel video;

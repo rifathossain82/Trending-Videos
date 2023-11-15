@@ -1,6 +1,6 @@
 import 'package:chewie/chewie.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:trending_videos/src/features/video_player/bloc/video_player_state.dart';
+import 'package:trending_videos/src/features/video_player/cubit/video_player_state.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoPlayerCubit extends Cubit<VideoPlayerState> {
@@ -22,6 +22,16 @@ class VideoPlayerCubit extends Cubit<VideoPlayerState> {
     } catch (e) {
       emit(VideoPlayerError('Error initializing video player: $e'));
     }
+  }
+
+  Future<void> pauseVideoPlayer() async {
+    _chewieController.pause();
+    emit(VideoPlayerInitialized(_chewieController));
+  }
+
+  Future<void> playVideoPlayer() async {
+    _chewieController.play();
+    emit(VideoPlayerInitialized(_chewieController));
   }
 
   void disposeVideoPlayer() {
