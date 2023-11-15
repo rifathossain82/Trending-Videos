@@ -45,7 +45,6 @@ dependencies:
   flutter_svg:
   logger: ^2.0.2+1
   get_it: ^7.2.0
-  envied: ^0.3.0+3
 
   # State Management
   equatable: ^2.0.5

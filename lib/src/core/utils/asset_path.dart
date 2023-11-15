@@ -6,8 +6,10 @@ class AssetPath{
   static const String pageNotFound = 'assets/images/page_not_found.png';
 
   /// icons
-  static const String homeIcon = 'assets/icons/home.svg';
-  static const String chatIcon = 'assets/icons/chat.svg';
+  static const String homeActiveIcon = 'assets/icons/home_active.svg';
+  static const String homeInactiveIcon = 'assets/icons/home_inactive.svg';
+  static const String chatActiveIcon = 'assets/icons/chat_active.svg';
+  static const String chatInactiveIcon = 'assets/icons/chat_inactive.svg';
   static const String noDataFoundIcon = 'assets/icons/no_data_found.svg';
   static const String backIcon = 'assets/icons/back.svg';
   static const String favoriteIcon = 'assets/icons/favorite.svg';

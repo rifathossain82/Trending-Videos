@@ -1,5 +1,4 @@
 import 'package:agora_chat_sdk/agora_chat_sdk.dart';
-import 'package:trending_videos/src/core/helpers/helper_methods.dart';
 import 'package:trending_videos/src/core/services/snackbar_services.dart';
 import 'package:trending_videos/src/core/utils/agora_chat_config.dart';
 import 'package:trending_videos/src/core/utils/color.dart';
