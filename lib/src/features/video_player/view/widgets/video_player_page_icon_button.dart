@@ -20,7 +20,10 @@ class VideoPlayerPageIconButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(8),
+        alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(
+          vertical: 8,
+        ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(

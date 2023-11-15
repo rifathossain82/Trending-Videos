@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trending_videos/src/core/extensions/build_context_extension.dart';
+import 'package:trending_videos/src/core/services/navigation_services.dart';
 import 'package:trending_videos/src/core/utils/color.dart';
 import 'package:trending_videos/src/core/widgets/cached_network_image_builder.dart';
 import 'package:trending_videos/src/core/widgets/k_button.dart';
+import 'package:trending_videos/src/features/channel/view/pages/channel_page.dart';
 import 'package:trending_videos/src/features/home/model/trending_video_model.dart';
+import 'package:trending_videos/src/features/video_player/cubit/video_player_cubit.dart';
 
 class VideoPlayerPageChannelInfoWidget extends StatelessWidget {
   final TrendingVideoModel video;
@@ -25,6 +29,11 @@ class VideoPlayerPageChannelInfoWidget extends StatelessWidget {
           Expanded(
             flex: 5,
             child: ListTile(
+              onTap: (){
+                /// On Tap Event for Channel
+                BlocProvider.of<VideoPlayerCubit>(context).pauseVideoPlayer();
+                NavigationService.push(const ChannelPage());
+              },
               dense: true,
               contentPadding: EdgeInsets.zero,
               leading: CachedNetworkImageBuilder(

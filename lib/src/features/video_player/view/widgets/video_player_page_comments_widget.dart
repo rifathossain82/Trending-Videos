@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:trending_videos/src/core/extensions/build_context_extension.dart';
+import 'package:trending_videos/src/core/services/navigation_services.dart';
 import 'package:trending_videos/src/core/utils/asset_path.dart';
 import 'package:trending_videos/src/core/utils/color.dart';
 import 'package:trending_videos/src/core/widgets/cached_network_image_builder.dart';
+import 'package:trending_videos/src/features/comments/view/pages/comments_page.dart';
+import 'package:trending_videos/src/features/video_player/cubit/video_player_cubit.dart';
 
 class VideoPlayerPageCommentsWidget extends StatelessWidget {
   const VideoPlayerPageCommentsWidget({Key? key}) : super(key: key);
@@ -60,34 +64,41 @@ class _CommentBoxWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      padding: const EdgeInsets.all(16),
-      margin: const EdgeInsets.symmetric(
-        horizontal: 15.0,
-      ),
-      decoration: BoxDecoration(
-        color: kWhite,
-        borderRadius: BorderRadius.circular(6),
-        border: Border.all(
-          color: Colors.grey.shade300,
+    return GestureDetector(
+      onTap: (){
+        /// On Tap Event for Comment Box
+        BlocProvider.of<VideoPlayerCubit>(context).pauseVideoPlayer();
+        NavigationService.push(const CommentsPage());
+      },
+      child: Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.all(16),
+        margin: const EdgeInsets.symmetric(
+          horizontal: 15.0,
         ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            'Add Comment',
-            style: context.textTheme.bodySmall?.copyWith(
-              fontWeight: FontWeight.w500,
-              fontSize: 12,
-              color: kGreyTextColor,
+        decoration: BoxDecoration(
+          color: kWhite,
+          borderRadius: BorderRadius.circular(6),
+          border: Border.all(
+            color: Colors.grey.shade300,
+          ),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Add Comment',
+              style: context.textTheme.bodySmall?.copyWith(
+                fontWeight: FontWeight.w500,
+                fontSize: 12,
+                color: kGreyTextColor,
+              ),
             ),
-          ),
-          SvgPicture.asset(
-            AssetPath.sendIcon,
-          ),
-        ],
+            SvgPicture.asset(
+              AssetPath.sendIcon,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -124,7 +135,7 @@ class _CommentListItemWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CachedNetworkImageBuilder(
-            imgURl: "",
+            imgURl: "https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg",
             borderRadius: BorderRadius.circular(100),
             height: 32,
             width: 32,
