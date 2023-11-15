@@ -23,6 +23,11 @@ Trending Videos App is a cutting-edge Flutter application that brings together t
 
 <br><br>
 
+Here is the [APK Zip File](https://drive.google.com/file/d/1T4lFhyaU5seIGNFBJyC7-xdJhSwW-9Jz/view).  
+Please review the chat features before November 16, 2023 4:27 PM UTC, otherwise user token will expire.
+
+<br><br>
+
 ## Screenshots:
 
 
