@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:trending_videos/src/core/extensions/build_context_extension.dart';
 import 'package:trending_videos/src/core/services/navigation_services.dart';
-import 'package:trending_videos/src/core/utils/asset_path.dart';
 import 'package:trending_videos/src/core/widgets/k_button.dart';
 import 'package:trending_videos/src/features/auth/view/pages/sign_in_page.dart';
 
@@ -18,14 +16,14 @@ class SignInRequestWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset(
-            AssetPath.noDataFoundIcon,
-            height: context.screenHeight * 0.27,
-            width: context.screenWidth,
-            alignment: Alignment.center,
+          Text(
+            'Ooops!',
+            style: context.textTheme.titleLarge?.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
           ),
           Text(
-            'You are not sign in',
+            'You are not signed in',
             style: context.textTheme.bodySmall,
           ),
           const SizedBox(height: 20),

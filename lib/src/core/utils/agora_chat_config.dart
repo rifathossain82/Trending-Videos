@@ -9,19 +9,19 @@ final userList = [
     image: '',
     name: 'Rifat',
     id: 'rh123',
-    token: '007eJxTYMhijNux47XN9/Btbfz+7zI/LdNSZtbaWeR9dqPpgrf/XyxWYEhLSzZKSzE3SU1LsjSxSLZITDJLTkpJTbawMDG0TDVNehkWktoQyMhQV3aFkZGBlYERCEF8FYZUA3PLlCRjA10Lw7Q0XUPD1FRdSxMjE92UNCOLJINkc0MzyxQAbtIqNA==',
+    token: '007eJxTYLj2bp/BhoQVirJX5NecTLgwKVT7DJfX7KPvpCKPfzLdt+KyAkNaWrJRWoq5SWpakqWJRbJFYpJZclJKarKFhYmhZappUtzHkNSGQEaGqZ/NGBgZWIGYkQHEV2FINTC3TEkyNtC1MExL0zU0TE3VtTQxMtFNSTOySDJINjc0s0wBAKx6KqI=',
   ),
   const UserModel(
     image: '',
     name: 'Kawchar',
     id: 'kawchar123',
-    token: '007eJxTYPhf6Vy2JUr43sZP2aGNvzKP/Fhk49nbsPjLgyrvOquOJ3cVGNLSko3SUsxNUtOSLE0ski0Sk8ySk1JSky0sTAwtU02TmMNDUhsCGRkeX1FjZGRgZWAEQhBfhSHN2NDS3NzAQNfCMC1N19AwNVU30QhIGCUlJxqlJZknWaYZAwAHuiud',
+    token: '007eJxTYHjiI9wnf95gpsXc/y+j4s+LOmtHyR66tVfP6DvXcUYfnfsKDGlpyUZpKeYmqWlJliYWyRaJSWbJSSmpyRYWJoaWqaZJlR9DUhsCGRlc4x2YGRlYGRiBEMRXYUgzNrQ0Nzcw0LUwTEvTNTRMTdVNNAISRknJiUZpSeZJlmnGAFtMJ7I=',
   ),
   const UserModel(
     image: '',
     name: 'Jobayer',
     id: 'jobayer123',
-    token: '007eJxTYEho3fGmwvlvuLHO19iKt/4cu3auTM8/msboqNX9+HtN7G0FhrS0ZKO0FHOT1LQkSxOLZIvEJLPkpJTUZAsLE0PLVNMksfCQ1IZARgY5pqOsjAysDIxACOKrMJiYmCeZJKcY6FoYGZjpGhqmpupamlka6ZobmiaamhulmltYJgMA7xgngQ==',
+    token: '007eJxTYKhwFlvRu2/Fl5cfpBlNLY9knMl1/+H5e6euspDp+jtRYq4KDGlpyUZpKeYmqWlJliYWyRaJSWbJSSmpyRYWJoaWqaZJvR9DUhsCGRkseH8zMzKwMjACIYivwmBiYp5kkpxioGthZGCma2iYmqpraWZppGtuaJpoam6Uam5hmQwAsownfw==',
   ),
   const UserModel(
     image: '',
@@ -34,5 +34,11 @@ final userList = [
     name: 'Fahim',
     id: 'fahim123',
     token: '007eJxTYHhlfrvAR/fHLo6P7x5tkFbJ5ea/riqy4NWHnScfnTtluahYgSEtLdkoLcXcJDUtydLEItkiMcksOSklNdnCwsTQMtU0yS88JLUhkJHh0cMcFkYGVgZGIATxVRiSzJMtLZJSDHQtjM3NdQ0NU1N1LVMNDXUNjE2NDdMSLZKSTcwAuVgqiQ==',
+  ),
+  const UserModel(
+    image: '',
+    name: 'Jamal',
+    id: 'jamal123',
+    token: '007eJxTYIjfl8WjublqaSDvEb4jOt2GlXMuqLQfY2RymMR2c0Y9+34FhrS0ZKO0FHOT1LQkSxOLZIvEJLPkpJTUZAsLE0PLVNMkqY8hqQ2BjAx8/MtZGRlYGRiBEMRXYUizSDRNM0o00LUwTjHSNTRMTdW1TDI2000xtzBJNU61TDYwNwMAqJQlZQ==',
   ),
 ];
