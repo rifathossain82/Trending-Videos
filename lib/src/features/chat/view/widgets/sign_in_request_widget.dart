@@ -19,13 +19,13 @@ class SignInRequestWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SvgPicture.asset(
-            AssetPath.noDataFoundIcon,
+            AssetPath.robotIcon,
             height: context.screenHeight * 0.27,
             width: context.screenWidth,
             alignment: Alignment.center,
           ),
           Text(
-            'You are not sign in',
+            'You are not signed in',
             style: context.textTheme.bodySmall,
           ),
           const SizedBox(height: 20),

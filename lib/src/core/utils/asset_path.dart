@@ -18,6 +18,7 @@ class AssetPath{
   static const String sendIcon = 'assets/icons/send.svg';
   static const String shareIcon = 'assets/icons/share.svg';
   static const String upDownIcon = 'assets/icons/up_down.svg';
+  static const String robotIcon = 'assets/icons/robot.svg';
 
 
 }
