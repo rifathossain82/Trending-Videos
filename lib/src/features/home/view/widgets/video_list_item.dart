@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:trending_videos/src/core/extensions/build_context_extension.dart';
 import 'package:trending_videos/src/core/extensions/date_time_extension.dart';
@@ -6,6 +7,7 @@ import 'package:trending_videos/src/core/services/navigation_services.dart';
 import 'package:trending_videos/src/core/utils/color.dart';
 import 'package:trending_videos/src/core/widgets/cached_network_image_builder.dart';
 import 'package:trending_videos/src/features/home/model/trending_video_model.dart';
+import 'package:trending_videos/src/features/video_player/cubit/video_player_cubit.dart';
 import 'package:trending_videos/src/features/video_player/view/pages/video_player_page.dart';
 
 class VideoListItem extends StatelessWidget {
@@ -21,7 +23,10 @@ class VideoListItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         NavigationService.push(
-          VideoPlayerPage(video: video),
+          BlocProvider(
+            create: (context) => VideoPlayerCubit(),
+            child: VideoPlayerPage(video: video),
+          ),
         );
       },
       child: Container(
