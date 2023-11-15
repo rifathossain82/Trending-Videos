@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:trending_videos/src/core/utils/asset_path.dart';
 import 'package:trending_videos/src/features/chat/view/pages/user_list_page.dart';
-import 'package:trending_videos/src/features/dashboard/cubits/dashboard_cubit.dart';
+import 'package:trending_videos/src/features/dashboard/bloc/dashboard_bloc.dart';
+import 'package:trending_videos/src/features/dashboard/model/bottom_navigation_bar_item_model.dart';
+import 'package:trending_videos/src/features/dashboard/view/widgets/dashboard_bottom_navigation_bar.dart';
 import 'package:trending_videos/src/features/home/view/pages/homepage.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -12,11 +15,11 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-  late DashboardCubit dashboardCubit;
+  late DashboardBloc dashboardBloc;
 
   @override
   void initState() {
-    dashboardCubit = BlocProvider.of<DashboardCubit>(context);
+    dashboardBloc = BlocProvider.of<DashboardBloc>(context);
     super.initState();
   }
 
@@ -25,31 +28,31 @@ class _DashboardPageState extends State<DashboardPage> {
     UserListPage(),
   ];
 
+  final bottomNavigationBarItems = const <BottomNavigationBarItemModel>[
+    BottomNavigationBarItemModel(
+      activeIconPath: AssetPath.homeActiveIcon,
+      inactiveIconPath: AssetPath.homeInactiveIcon,
+      title: 'Home',
+    ),
+    BottomNavigationBarItemModel(
+      activeIconPath: AssetPath.chatActiveIcon,
+      inactiveIconPath: AssetPath.chatInactiveIcon,
+      title: 'Chat',
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<DashboardCubit, DashboardState>(
+    return BlocBuilder<DashboardBloc, DashboardState>(
       builder: (context, state) {
         return Scaffold(
           body: SafeArea(
-            child: pages[dashboardCubit.bottomNavigationIndex],
+            child: pages[state.bottomNavigationIndex],
           ),
-          bottomNavigationBar: BottomNavigationBar(
-            currentIndex: dashboardCubit.bottomNavigationIndex,
-            onTap: (index) {
-              dashboardCubit.changeBottomNavigationIndex(index);
-            },
-            items: const [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: "Home",
-                tooltip: "Home",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.chat),
-                label: "Chat",
-                tooltip: "Chat",
-              ),
-            ],
+          bottomNavigationBar: DashboardBottomNavigationBar(
+            dashboardBloc: dashboardBloc,
+            dashboardState: state,
+            bottomNavigationBarItems: bottomNavigationBarItems,
           ),
         );
       },

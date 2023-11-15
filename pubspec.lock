@@ -226,7 +226,7 @@ packages:
     source: hosted
     version: "0.7.8"
   envied:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: envied
       url: "https://pub.dartlang.org"
