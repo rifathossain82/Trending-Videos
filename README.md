@@ -6,13 +6,13 @@ Trending Videos App is a cutting-edge Flutter application that brings together t
 
 - State management: **Flutter Bloc**
 - Project Architecture: **Feature First Layer**
-- Flutter version: [3.3.9](https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.3.9-stable.zip)
-- Dart version: 2.18.5  
+- Flutter version: [3.16.0](https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.16.0-stable.zip)
+- Dart version: 3.2.0  
 
 <br><br>
 
 ### User id for chat:
-***Note: Token expires on November 16, 2023 4:27 PM UTC***
+***Note: Token expires on November 20, 2023 5:05 AM UTC***
 
 - rh123
 - kawchar123
@@ -20,11 +20,6 @@ Trending Videos App is a cutting-edge Flutter application that brings together t
 - nayeem123
 - fahim123
 
-
-<br><br>
-
-Here is the [APK Zip File](https://drive.google.com/file/d/1T4lFhyaU5seIGNFBJyC7-xdJhSwW-9Jz/view).  
-Please review the chat features before November 16, 2023 4:27 PM UTC, otherwise user token will expire.
 
 <br><br>
 
